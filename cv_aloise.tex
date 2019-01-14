@@ -35,7 +35,7 @@
 \includegraphics[width=0.9\columnwidth]{media/me0.jpg}\\[\baselineskip] % Your photo
 \small % Smaller font size
 \textbf{Mail} \\
-\textit{irvin.aloise@gmail.com} \\ % Your email address
+\textit{ialoise@diag.uniroma1.it} \\ % Your email address
 \Sep
 
 \textbf{Personal Site}\\
@@ -44,16 +44,6 @@
 
 \textbf{LinkedIn} \\
 \textit{https://goo.gl/NQvHbJ} \\ % Your URL
-\Sep
-
-\textbf{Phone} \\
-(+39) 3331501761 \\ % Your phone number
-\Sep % Some whitespace
-
-\textbf{Address} \\
-Via Larderia, 2 \\ % Address 1
-87042, Altomonte \\ % Address 2
-Italy \\ % Address 3
 \Sep
 
 \textbf{Birthday} \\
@@ -114,12 +104,34 @@ Final grades: $\nicefrac{100}{110}$}
 %------------------------------------------------
 
 \Sep % Extra whitespace after the end of a major section
+\Sep % Extra whitespace after the end of a major section
+
+%------------------------------------------------
 
 %----------------------------------------------------------------------------------------
-%	EXPERIENCE
+%	PUBLICATIONS
 %----------------------------------------------------------------------------------------
 
-\CVSection{Experience}
+\CVSection{Publications}
+
+%------------------------------------------------
+
+
+\CVItem{Sep 2018}{
+\textbf{Matrix Difference in Pose-Graph Optimization} \\
+Pose-Graph optimization is a crucial component of many modern SLAM systems. Most prominent state of the art systems address this problem by iterative non-linear least squares. Both number of iterations and convergence basin of these approaches depend on the error functions used to describe the problem. The smoother and more convex the error function with respect to perturbations of the state variables, the better the least-squares solver will perform. In this paper we propose an alternative error function obtained by removing some non-linearities from the standard used one - i.e. the geodesic error function -  that exhibits a larger convergence basin.}
+
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL PROJECTS
+%----------------------------------------------------------------------------------------
+
+\CVSection{Personal Projects}
 
 %------------------------------------------------
 
@@ -127,13 +139,17 @@ Final grades: $\nicefrac{100}{110}$}
 \textbf{Person Detection and Tracking for Human-Robot Interaction} \\
 This project aims to detect and track a person in human-friendly environments (like in a school). The system is developed for a differential drive robot and exploits laser data together with RGB-D images to achieve the goal. It has been developed a ROS package that uses \textit{OpenCV} to perform proper image processing in an efficient way.}
 
+%----------------------------------------------------------------------------------------
+%   NEW PAGE
+%----------------------------------------------------------------------------------------
 %------------------------------------------------
+\clearpage % Start a new page
+\userinformation % Print your information in the left column
+\framebreak % End of the first column
 
 \CVItem{Jul 2016 - Dec 2016, Sapienza Univesity of Rome, Exam project}{
 \textbf{Development of a Simulation Environment for Teleoperated Surgical Task} \\
 Realization of a simulative framework for a teleoperation task between a real haptic device (Geomagic Touch) and a virtual manipulator (KUKA LBR 4+) using VREP software. The surgical task that has been designed is a needle penetration in a simulated biological tissue.}
-
-%------------------------------------------------
 
 \CVItem{Jun 2016 - Jul 2016, Sapienza University of Rome, Exam project}{
 \textbf{Analyzing Visualization Techniques for Convolutional Neural Neworks} \\ 
@@ -147,19 +163,13 @@ techniques for Convolutional Neural Networks (CNNs), in order to better understa
 The project proposes a method to classify MIDI instances by author, evaluating a similarity metric based on the concept of Kolmogorov Complexity. The classifier can be used as the first stage of a multi-stage classifier, in order to bias more specific units. 
 The entire project has been developed in \textit{MATLAB}.}
 
-%----------------------------------------------------------------------------------------
-%   NEW PAGE
-%----------------------------------------------------------------------------------------
-%------------------------------------------------
-\clearpage % Start a new page
-\userinformation % Print your information in the left column
-\framebreak % End of the first column
 \CVItem{Dec 2014 - Feb 2015, Sapienza University of Rome, Exam project}{
 \textbf{A Third Person Game Based on the Three.js Library} \\
 It has been developed a game based on WebGL using a Javascript library 
 (\textit{Three.js}). The game is straightforward and it can be played on a browser 
 that supports HTML5.}
 
+\Sep
 \Sep
 
 %----------------------------------------------------------------------------------------
@@ -171,7 +181,12 @@ that supports HTML5.}
 \CVItem{Nov 2017 - Feb 2018}{\textbf{Tutoring for the course of \textit{Sistemi 
       Operativi}}\\ The course is within the B.Sc. in Computer Science, 6 ECTS 
       credits.}
+\Sep
 
+\CVItem{Sep 2018 - June 2019}{\textbf{Tutoring for the course of \textit{Sistemi 
+      Operativi}}\\ The course is within the B.Sc. in Computer Science, 6 ECTS 
+      credits.}
+\Sep
 \Sep
 
 %----------------------------------------------------------------------------------------
@@ -211,6 +226,13 @@ that supports HTML5.}
 %	AWARDS
 %----------------------------------------------------------------------------------------
 
+%----------------------------------------------------------------------------------------
+%   NEW PAGE
+%----------------------------------------------------------------------------------------
+%------------------------------------------------
+\clearpage % Start a new page
+\userinformation % Print your information in the left column
+\framebreak % End of the first column
 \CVSection{Languages}
 
 %------------------------------------------------
@@ -223,6 +245,7 @@ that supports HTML5.}
 
 %------------------------------------------------
 
+\Sep % Extra whitespace after the end of a major section
 \Sep % Extra whitespace after the end of a major section
 
 %----------------------------------------------------------------------------------------
