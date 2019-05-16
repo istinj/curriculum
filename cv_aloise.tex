@@ -20,10 +20,12 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[a4paper,12pt]{memoir} % Font and paper size
-\usepackage{lipsum}
 \usepackage{nicefrac}
 
 \input{structure.tex} % Include the file specifying document layout and packages
+\definecolor{LinkColor}{HTML}{E0B441}
+
+\usepackage[colorlinks=false,allbordercolors=LinkColor]{hyperref}
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION 
@@ -116,11 +118,24 @@ Final grades: $\nicefrac{100}{110}$}
 
 %------------------------------------------------
 
+\CVItem{\href{https://srrg.gitlab.io/sashago.html}{Systematic Handling of Heterogeneous Geometric 
+Primitives in Graph-SLAM Optimization}}{
+\textbf{\small 2019 - RSS and RA-L} \\
+In this work, we propose a pose-landmark graph optimization back-end
+that supports maps consisting of points, lines or planes. Our
+back-end allows representing both homogeneous (\emph{point-point},
+\emph{line-line}, \emph{plane-plane}) and heterogeneous measurements
+(\emph{point-on-line}, \emph{point-on-plane}, \emph{line-on-plane}).
+Rather than treating all cases independently, we use a unified
+formulation that leads to both a compact derivation and a concise
+implementation. The additional geometric information, deriving from
+the use of higher-dimension primitives and constraints, yields to
+increased robustness and widens the convergence basin of our
+method.}
 
-\CVItem{Sep 2018}{
-\textbf{Matrix Difference in Pose-Graph Optimization} \\
+\CVItem{\href{https://arxiv.org/abs/1809.00952}{Matrix Difference in Pose-Graph Optimization}}{
+\textbf{\small 2018 - ArXiv} \\
 Pose-Graph optimization is a crucial component of many modern SLAM systems. Most prominent state of the art systems address this problem by iterative non-linear least squares. Both number of iterations and convergence basin of these approaches depend on the error functions used to describe the problem. The smoother and more convex the error function with respect to perturbations of the state variables, the better the least-squares solver will perform. In this paper we propose an alternative error function obtained by removing some non-linearities from the standard used one - i.e. the geodesic error function -  that exhibits a larger convergence basin.}
-
 
 %------------------------------------------------
 
@@ -130,7 +145,13 @@ Pose-Graph optimization is a crucial component of many modern SLAM systems. Most
 %----------------------------------------------------------------------------------------
 %	PERSONAL PROJECTS
 %----------------------------------------------------------------------------------------
-
+%----------------------------------------------------------------------------------------
+%   NEW PAGE
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\clearpage % Start a new page
+\userinformation % Print your information in the left column
+\framebreak % End of the first column
 \CVSection{Personal Projects}
 
 %------------------------------------------------
@@ -142,10 +163,7 @@ This project aims to detect and track a person in human-friendly environments (l
 %----------------------------------------------------------------------------------------
 %   NEW PAGE
 %----------------------------------------------------------------------------------------
-%------------------------------------------------
-\clearpage % Start a new page
-\userinformation % Print your information in the left column
-\framebreak % End of the first column
+%----------------------------------------------------------------------------------------
 
 \CVItem{Jul 2016 - Dec 2016, Sapienza Univesity of Rome, Exam project}{
 \textbf{Development of a Simulation Environment for Teleoperated Surgical Task} \\
@@ -169,8 +187,8 @@ It has been developed a game based on WebGL using a Javascript library
 (\textit{Three.js}). The game is straightforward and it can be played on a browser 
 that supports HTML5.}
 
-\Sep
-\Sep
+\Sep % Extra whitespace after the end of a major section
+\Sep % Extra whitespace after the end of a major section
 
 %----------------------------------------------------------------------------------------
 %	TEACHING
@@ -191,7 +209,13 @@ that supports HTML5.}
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
-
+%----------------------------------------------------------------------------------------
+%   NEW PAGE
+%----------------------------------------------------------------------------------------
+%------------------------------------------------
+\clearpage % Start a new page
+\userinformation % Print your information in the left column
+\framebreak % End of the first column
 \CVSection{Computer Skills}
 
 %------------------------------------------------
@@ -220,18 +244,11 @@ that supports HTML5.}
 %------------------------------------------------
 
 \Sep % Extra whitespace after the end of a major section
+\Sep % Extra whitespace after the end of a major section
 
 %----------------------------------------------------------------------------------------
 %	AWARDS
 %----------------------------------------------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-%   NEW PAGE
-%----------------------------------------------------------------------------------------
-%------------------------------------------------
-\clearpage % Start a new page
-\userinformation % Print your information in the left column
-\framebreak % End of the first column
 \CVSection{Languages}
 
 %------------------------------------------------
@@ -263,6 +280,7 @@ that supports HTML5.}
 
 %------------------------------------------------
 
+\Sep % Extra whitespace after the end of a major section
 \Sep % Extra whitespace after the end of a major section
 
 %----------------------------------------------------------------------------------------
