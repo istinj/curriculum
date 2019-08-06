@@ -15,9 +15,9 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
 
 \documentclass[a4paper,12pt]{memoir} % Font and paper size
 \usepackage{nicefrac}
@@ -26,10 +26,15 @@
 \definecolor{LinkColor}{HTML}{E0B441}
 
 \usepackage[colorlinks=false,allbordercolors=LinkColor]{hyperref}
+\hypersetup{%
+  colorlinks=false,% hyperlinks will be black
+  linkbordercolor=red,% hyperlink borders will be red
+  pdfborderstyle={/S/U/W 1}% border style will be underline of width 1pt
+}
 
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
 %	NAME AND CONTACT INFORMATION 
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
 
 \userinformation{ % Set the content that goes into the sidebar of each page
 \begin{flushright}
@@ -37,252 +42,190 @@
 \includegraphics[width=0.9\columnwidth]{media/me0.jpg}\\[\baselineskip] % Your photo
 \small % Smaller font size
 \textbf{Mail} \\
-\textit{ialoise@diag.uniroma1.it} \\ % Your email address
+{\footnotesize\textit{ialoise@diag.uniroma1.it}} \\ 
 \Sep
 
 \textbf{Personal Site}\\
-\textit{https://goo.gl/85uhCK}\\
+{\footnotesize\href{https://istinj.github.io}{https://istinj.github.io}}\\
 \Sep
 
 \textbf{LinkedIn} \\
-\textit{https://goo.gl/NQvHbJ} \\ % Your URL
+{\footnotesize\href{https://goo.gl/NQvHbJ}{https://goo.gl/NQvHbJ}} \\ 
 \Sep
 
 \textbf{Birthday} \\
-21 Maggio 1991
+{\footnotesize May 21, 1991}
 \vfill % Whitespace under this block to push it up under the photo
 \end{flushright}
 }
 
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
 
 \begin{document}
+\userinformation 
+\framebreak 
 
-\userinformation % Print your information in the left column
-
-\framebreak % End of the first column
-
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
 %	HEADING
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
+\cvheading{Irvin Aloise}
+\cvsubheading{Ph.D. Student in Engineering in Computer Science}
 
-\cvheading{Irvin Aloise} % Large heading - your name
-
-\cvsubheading{Software Engineer} % Subheading - your occupation/specialization
-
-%----------------------------------------------------------------------------------------
-%	ABOUT ME
-%----------------------------------------------------------------------------------------
-
-% \aboutme{About Me}{\lipsum[1]}
-
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
 %	EDUCATION
-%----------------------------------------------------------------------------------------
-
+% ---------------------------------------------------------------------------- %
 \CVSection{Education}
 
-%------------------------------------------------
+\CVItem{2017 - now, Sapienza University of Rome}{\textbf{Ph.D. in Engineering 
+in Computer Science} \\
+    Research Topics: Mobile Robotics, Simultaneous Localization and Mapping, 
+    Graph Optimization.\\
+    Advisor: \textit{Prof. Giorgio Grisetti}.}
 
-\CVItem{2017 - now, Sapienza University of Rome}{\textbf{Ph.D. in Computer Science} (in English) \\
-    Research Topics: Mobile Robotics, Simultaneous Localization and Mapping, Computer Vision.\\
-    Supervisor: \textit{Prof. Giorgio Grisetti}}
+\CVItem{2014 - 2017, Sapienza University of Rome}{\textbf{Master of Science in
+    Artificial Intelligence and Robotics} (in English) \\
+  Thesis title: \textit{Extended Measurements in Pose-Graph Optimization}. \\
+  Supervisor: \textit{Prof. Giorgio Grisetti} and \textit{Dominik Schlegel}. \\
+  Final grades: First Class with Honors ($\nicefrac{110}{110}$ cum laude).}
 
-
-%------------------------------------------------
-
-\CVItem{2014 - 2017, Sapienza University of Rome}{\textbf{Master of Science in Artificial Intelligence and Robotics} (in English) \\
-Thesis title: \textit{Extended Measurements in Pose-Graph Optimization} \\
-Supervisor: \textit{Prof. Giorgio Grisetti} and \textit{Ph.D. Dominik Schlegel} \\
-Final grades: First Class with Honors ($\nicefrac{110}{110}$ cum laude)}
-
-%------------------------------------------------
-
-\CVItem{2010 - 2014, Sapienza University of Rome}{\textbf{Bachelor of Science in Electronic Engineering} (in Italian) \\
-Thesis title: \textit{L'uso del Capture Point nello studio della reazione alle spinte nei robot umanoidi}. \\
-Supervisor: \textit{Prof. Giuseppe Oriolo} \\
-Final grades: $\nicefrac{100}{110}$}
-
-%------------------------------------------------
+\CVItem{2010 - 2014, Sapienza University of Rome}{\textbf{Bachelor of Science 
+in Electronic Engineering} (in Italian) \\
+  Thesis title: \textit{L'uso del Capture Point nello studio della reazione 
+  alle spinte nei robot umanoidi}. \\
+  Supervisor: \textit{Prof. Giuseppe Oriolo} \\
+  Final grades: $\nicefrac{100}{110}$}
 
 \Sep % Extra whitespace after the end of a major section
 \Sep % Extra whitespace after the end of a major section
 
-%------------------------------------------------
-
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
 %	PUBLICATIONS
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
 
 \CVSection{Publications}
 
-%------------------------------------------------
+\CVItem{Systematic Handling of Heterogeneous Geometric Primitives in Graph-SLAM 
+Optimization}{\textbf{\small IEEE Robotics and Automation Letters (RA-L), 2019} 
+\\
+I. Aloise, B. Della Corte, F. Nardi and G. Grisetti \\ 
+DOI: \href{10.1109/LRA.2019.2918054}{10.1109/LRA.2019.2918054} 
+}
 
-\CVItem{\href{https://srrg.gitlab.io/sashago.html}{Systematic Handling of Heterogeneous Geometric 
-Primitives in Graph-SLAM Optimization}}{
-\textbf{\small 2019 - RSS and RA-L} \\
-In this work, we propose a pose-landmark graph optimization back-end
-that supports maps consisting of points, lines or planes. Our
-back-end allows representing both homogeneous (\emph{point-point},
-\emph{line-line}, \emph{plane-plane}) and heterogeneous measurements
-(\emph{point-on-line}, \emph{point-on-plane}, \emph{line-on-plane}).
-Rather than treating all cases independently, we use a unified
-formulation that leads to both a compact derivation and a concise
-implementation. The additional geometric information, deriving from
-the use of higher-dimension primitives and constraints, yields to
-increased robustness and widens the convergence basin of our
-method.}
-
-\CVItem{\href{https://arxiv.org/abs/1809.00952}{Matrix Difference in Pose-Graph Optimization}}{
-\textbf{\small 2018 - ArXiv} \\
-Pose-Graph optimization is a crucial component of many modern SLAM systems. Most prominent state of the art systems address this problem by iterative non-linear least squares. Both number of iterations and convergence basin of these approaches depend on the error functions used to describe the problem. The smoother and more convex the error function with respect to perturbations of the state variables, the better the least-squares solver will perform. In this paper we propose an alternative error function obtained by removing some non-linearities from the standard used one - i.e. the geodesic error function -  that exhibits a larger convergence basin.}
-
-%------------------------------------------------
+\CVItem{Matrix Difference in Pose-Graph Optimization}{
+\textbf{ArXiv, 2018} \\
+I. Aloise and Giorgio Grisetti \\
+\href{https://arxiv.org/abs/1809.00952}{arXiv:1809.00952 [cs.RO]}}
 
 \Sep % Extra whitespace after the end of a major section
 \Sep % Extra whitespace after the end of a major section
 
-%----------------------------------------------------------------------------------------
-%	PERSONAL PROJECTS
-%----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-%   NEW PAGE
-%----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-\clearpage % Start a new page
-\userinformation % Print your information in the left column
-\framebreak % End of the first column
-\CVSection{Personal Projects}
-
-%------------------------------------------------
-
-\CVItem{Nov 2016 - Feb 2017, Sapienza Univesity of Rome, Exam project}{
-\textbf{Person Detection and Tracking for Human-Robot Interaction} \\
-This project aims to detect and track a person in human-friendly environments (like in a school). The system is developed for a differential drive robot and exploits laser data together with RGB-D images to achieve the goal. It has been developed a ROS package that uses \textit{OpenCV} to perform proper image processing in an efficient way.}
-
-%----------------------------------------------------------------------------------------
-%   NEW PAGE
-%----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-
-\CVItem{Jul 2016 - Dec 2016, Sapienza Univesity of Rome, Exam project}{
-\textbf{Development of a Simulation Environment for Teleoperated Surgical Task} \\
-Realization of a simulative framework for a teleoperation task between a real haptic device (Geomagic Touch) and a virtual manipulator (KUKA LBR 4+) using VREP software. The surgical task that has been designed is a needle penetration in a simulated biological tissue.}
-
-\CVItem{Jun 2016 - Jul 2016, Sapienza University of Rome, Exam project}{
-\textbf{Analyzing Visualization Techniques for Convolutional Neural Neworks} \\ 
-In this project, it has been tested and reproduced some of the most employed visualization
-techniques for Convolutional Neural Networks (CNNs), in order to better understand the representation of the images that a network produces. This has been developed using the \textit{Caffe} framework.}
-
-%------------------------------------------------
-
-\CVItem{Oct 2015 - Dec 2015, Sapienza University of Rome, Exam project}{
-\textbf{MIDI Classification Using Similarity Metric Based on Kolmogorov Complexity} \\
-The project proposes a method to classify MIDI instances by author, evaluating a similarity metric based on the concept of Kolmogorov Complexity. The classifier can be used as the first stage of a multi-stage classifier, in order to bias more specific units. 
-The entire project has been developed in \textit{MATLAB}.}
-
-\CVItem{Dec 2014 - Feb 2015, Sapienza University of Rome, Exam project}{
-\textbf{A Third Person Game Based on the Three.js Library} \\
-It has been developed a game based on WebGL using a Javascript library 
-(\textit{Three.js}). The game is straightforward and it can be played on a browser 
-that supports HTML5.}
-
-\Sep % Extra whitespace after the end of a major section
-\Sep % Extra whitespace after the end of a major section
-
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
 %	TEACHING
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
 
 \CVSection{Teaching Activities}
 
-\CVItem{Sep 2018 - June 2019, Sapienza University of Rome}{\textbf{Tutoring for the course of \textit{Sistemi 
-      Operativi}}\\ The course is within the B.Sc. in Computer Science, 6 ECTS credits.}
+\CVItem{September 2018 - June 2019, Sapienza University of Rome}
+{\textbf{Teaching Assistant of Operating Systems - \textit{Sistemi Operativi}} 
+  \\ Course held by Prof. G. Grisetti, B.Sc. in Engineering in Computer 
+  Science, 
+  6 ECTS credits.}
 
 \Sep
 
-\CVItem{Nov 2017 - Feb 2018, Sapienza University of Rome}{\textbf{Tutoring for the course of \textit{Sistemi 
-      Operativi}}\\ The course is within the B.Sc. in Computer Science, 6 ECTS  credits.}
-\Sep
-\Sep
+\CVItem{November 2017 - June 2018, Sapienza University of Rome}
+{\textbf{Teaching Assistant of Operating Systems - \textit{Sistemi Operativi}} 
+  \\ Course held by Prof. G. Grisetti, B.Sc. in Engineering in Computer 
+  Science, 6 ECTS credits.}
 
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-%   NEW PAGE
-%----------------------------------------------------------------------------------------
-%------------------------------------------------
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
 \clearpage % Start a new page
 \userinformation % Print your information in the left column
 \framebreak % End of the first column
-\CVSection{Computer Skills}
 
-%------------------------------------------------
+% ---------------------------------------------------------------------------- %
+%	LANGUAGES
+% ---------------------------------------------------------------------------- %
+\CVSection{Languages}
+
+\CVItem{Italian}{Mother-tongue}
+
+\CVItem{English}{Advanced}
+
+\Sep % Extra whitespace after the end of a major section
+\Sep % Extra whitespace after the end of a major section
+
+% ---------------------------------------------------------------------------- %
+%	SKILLS
+% ---------------------------------------------------------------------------- %
+\CVSection{Skills}
 
 \CVItem{Programming}
-{\begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.2\textwidth}}
-\bluebullet C++ &  \bluebullet Matlab & \bluebullet Python\\
-\bluebullet C &  \bluebullet HTML & \bluebullet Javascript\\
-\bluebullet \LaTeX
-\end{tabular}}
-
-%------------------------------------------------
-
-\CVItem{Other Software}
-{\begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.2\textwidth}}
- \bluebullet OpenCV &  \bluebullet ROS & \bluebullet OpenGL \\
-\end{tabular}}
+{C++, C, Octave, Matlab, Python, OpenGL and ImGui. }
 
 %------------------------------------------------
 
 \CVItem{Operating Systems}
-{\begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.2\textwidth}}
-\bluebullet Ubuntu &  \bluebullet Windows & \bluebullet MacOS \\
-\end{tabular}}
+{Ubuntu, Windows, MacOS}
 
 %------------------------------------------------
 
 \Sep % Extra whitespace after the end of a major section
 \Sep % Extra whitespace after the end of a major section
 
-%----------------------------------------------------------------------------------------
-%	AWARDS
-%----------------------------------------------------------------------------------------
-\CVSection{Languages}
-
-%------------------------------------------------
-
-\CVItem{Italian}{Mother-tongue}
-
-%------------------------------------------------
-
-\CVItem{English}{Advanced}
-
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
-\Sep % Extra whitespace after the end of a major section
-
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
 %	INTERESTS
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
 
 \CVSection{Interests}
 
-%------------------------------------------------
+\CVItem{Professional}{Mobile Robotics, SLAM, Computer Vision, Autonomous 
+Robotics, Machine Learning}
 
-\CVItem{Professional}{Robotics, SLAM, Machine Learning, Deep Learning, Convolutional Neural Networks, Computer Vision, Autonomous Robotics}
-
-%------------------------------------------------
-
-\CVItem{Personal}{Music, photography, cinema, technology, motor sports}
-
-%------------------------------------------------
+\CVItem{Personal}{Music, Photography, Cinema, Technology, Motor Sports}
 
 \Sep % Extra whitespace after the end of a major section
 \Sep % Extra whitespace after the end of a major section
 
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------- %
+%	MISC PROJECTS
+% ---------------------------------------------------------------------------- %
+
+\CVSection{Personal Projects}
+
+\CVItem{Jul 2016 - Dec 2016, Sapienza Univesity of Rome, Exam project}{
+  \textbf{Development of a Simulation Environment for Teleoperated Surgical 
+  Task} \\
+  Realization of a simulative framework for a teleoperation task between a real 
+  haptic device (Geomagic Touch) and a virtual manipulator (KUKA LBR 4+) using 
+  VREP software. The surgical task that has been designed is a needle 
+  penetration in a simulated biological tissue.}
+
+\CVItem{Jun 2016 - Jul 2016, Sapienza University of Rome, Exam project}{
+  \textbf{Analyzing Visualization Techniques for Convolutional Neural Neworks} 
+  \\ 
+  In this project, it has been tested and reproduced some of the most employed 
+  visualization
+  techniques for Convolutional Neural Networks (CNNs), in order to better 
+  understand the representation of the images that a network produces. This has 
+  been developed using the \textit{Caffe} framework.}
+
+\CVItem{Dec 2014 - Feb 2015, Sapienza University of Rome, Exam project}{
+  \textbf{A Third Person Game Based on the Three.js Library} \\
+  It has been developed a game based on WebGL using a Javascript library 
+  (\textit{Three.js}). The game is straightforward and it can be played on a 
+  browser that supports HTML5.}
+
+\Sep % Extra whitespace after the end of a major section
+\Sep % Extra whitespace after the end of a major section
+
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
 
 \end{document}
