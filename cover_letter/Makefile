@@ -1,6 +1,6 @@
 .PHONY : all latex bibtex pdf view clean distclean
 
-TARGET=main
+TARGET=cl_aloise
 SOURCE=$(TARGET).tex
 SUPPLEMENTARY_TARGET=supplementary_material
 SUPPLEMENTARY_SOURCE=$(SUPPLEMENTARY_TARGET).tex

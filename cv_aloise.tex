@@ -32,6 +32,9 @@
   pdfborderstyle={/S/U/W 1}% border style will be underline of width 1pt
 }
 
+\usepackage{multirow}
+\usepackage{booktabs}
+
 % ---------------------------------------------------------------------------- %
 %	NAME AND CONTACT INFORMATION 
 % ---------------------------------------------------------------------------- %
@@ -226,13 +229,44 @@ Sports}
 \CVItem{2015, Sapienza University of Rome, Exam project}{
   \textbf{A Third-Person Game Based on the \texttt{Three.js} Library}}
 
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+\clearpage % Start a new page
+\userinformation % Print your information in the left column
+\framebreak % End of the first column
+
+\CVSection{References}
+
+\vspace{15pt}
+\begin{tabular}{>{\arraybackslash}p{0.45\linewidth}>{\arraybackslash}p{0.05\linewidth}>{\arraybackslash}p{0.45\linewidth}}
+  %% \toprule
+  %ia names
+  \textbf{\color{RoyalBlue}Prof. Dr. Giorgio Grisetti} & {} &
+  \textbf{\color{RoyalBlue}Prof. Dr. Cyrill Stachniss} \\
+  % qualifications
+  \textbf{Associate professor at Sapienza University of Rome} & {} &
+  \textbf{Full professor at the University of Bonn} \\
+  %ia lab/department
+  Dept. of Computer, Control, and Management Engineering & {} &
+  Head of the lab for Photogrammetry and Robotics \\
+  %ia contacts - address
+  {\footnotesize Via Ariosto 25, 00185, Rome, Italy} & {} &
+  {\footnotesize Nussallee 15, 53115, Bonn, Germany} \\
+  %ia contacts - mail
+  {\footnotesize Mail: \href{mailto:grisetti@diag.uniroma1.it}{grisetti@diag.uniroma1.it}} & {} &
+  {\footnotesize Mail: \href{mailto:cyrill.stachniss@igg.uni-bonn.de}{cyrill.stachniss@igg.uni-bonn.de}}
+  %% \bottomrule
+\end{tabular}
+
 
 % ---------------------------------------------------------------------------- %
 % ---------------------------------------------------------------------------- %
 % ---------------------------------------------------------------------------- %
 % ---------------------------------------------------------------------------- %
 
-\vspace{20pt}
+%% \vspace{20pt}
+\vspace{3cm}
 %\begin{flushleft}
 %  {Rome, 2019.12.29}
 %\end{flushleft}
