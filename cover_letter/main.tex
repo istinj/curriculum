@@ -1,0 +1,77 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}       
+
+% moderncv themes
+\moderncvstyle{classic}                            
+\moderncvcolor{green}                              % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Irvin}{Aloise}
+\title{Cover Letter}                               % optional, remove / comment the line if not wanted
+%% \phone[mobile]{+1~(234)~567~890}                % optional, remove / comment the line if not wanted
+\email{ialoise@diag.uniroma1.it}                   % optional, remove / comment the line if not wanted
+\homepage{https://istinj.github.io}                % optional, remove / comment the line if not wanted
+%% \extrainfo{additional information}              % optional, remove / comment the line if not wanted
+%% \photo[64pt][0.4pt]{picture}                    % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+
+\begin{document}
+% recipient data
+\recipient{ANYbotics Recruitment Team}{
+  ANYbotics AG.\\Hagenholzstrasse 83a\\8050 Z\"urich, Switzerland}
+\date{\today}
+\opening{Dear Sir or Madam,}
+\closing{Yours faithfully,}
+\enclosure[Attached]{full resume}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+%% ------------------------------------------------------------------------------------------------ %%
+%% ------------------------------------------------------------------------------------------------ %%
+
+I am responding to your ad for \emph{Navigation Software Engineer}.
+I saw your ad on your website and I think that my qualifications
+fit the requirements for this position.
+
+I am currently a Ph.D. Candidate in Computer Science at Sapienza University of Rome -
+expected ending date is October 2020.
+In my Ph.D. I focused on Simultaneous Localization and Mapping (SLAM), Sensor Calibration and
+Non-Linear Optimization. A brief overview of my qualifications:
+
+\vspace{10pt}
+\begin{itemize}
+\item[--] Extensive knowledge of the SLAM problem and
+  experience in developing efficient SLAM system from scratch
+  (e.g. \url{https://srrg.gitlab.io/sashago.html})
+\item[--] Extensive knowledge of state-of-the-art Non-Linear Optimization Solvers like \texttt{g2o}, \texttt{gtsam}, \texttt{ceres} and \texttt{slam++}
+  (e.g. \url{https://srrg.gitlab.io/g2o_chordal_plugin.html} and
+  \url{https://gitlab.com/srrg-software/srrg_g2o_slim})
+\item[--] Experience with multiple types of map representation
+  (e.g. point-clouds, geometric primitives, factor graphs)
+\item[--] Highly proficient in \texttt{C++} (also modern standards)
+\item[--] Daily use of \texttt{Eigen} and \texttt{ROS}
+  and debugging tools like \texttt{GDB} and \texttt{Valgrind}.
+\item[--] Experience with Continous Integration and Dockers.
+\end{itemize}
+\vspace{10pt}
+
+If you think that I could match the requirements, please contact me.
+
+%% ------------------------------------------------------------------------------------------------ %%
+%% ------------------------------------------------------------------------------------------------ %%
+\makeletterclosing
+\end{document}
+
